@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Trent Peterson
+   Date:   10.24.18  
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+/* This sets up the size and position of the article. */
+
+article {
+    float: left;
+    width: 384px;
+}
+
+
+/* First Line and Drop Cap Styles */
+/* this sets up the first line as small caps and the first letter as extra large */
+article p:first-of-type::first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
+
+article p:first-of-type::first-letter {
+    font-size: 4em;
+    float: left;
+    font-family: serif;
+    line-height: .8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Aside Styles */
+/* This sets up the postion and size of the aside element */
+aside {
+    float: left;
+    width: 768px;
+}
+
+
+/* Map Styles */
+/* This sets up the size of the map's spacing and the size of the actual map and its postion useing margins. */
+#battleMap {
+    width: 688px;
+    margin: 20px auto 20px auto;
+    position: relative;
+}
+
+#mapImage {
+    display: block;
+    width: 100%;
+}
+
+/* Interactive Map Styles */
+/* This sets up the position of each of the dots on the map. */
+
+a.battleMarkers {
+    position: absolute;
+}
+
+#marker1 {
+    top: 220px;
+    left: 340px;
+}
+
+#marker2 {
+    top: 194px;
+    left: 358px;
+}
+
+#marker3 {
+    top: 202px;
+    left: 400px;
+}
+
+#marker4 {
+    top: 217px;
+    left: 452px;
+}
+
+#marker5 {
+    top: 229px;
+    left: 498px;
+}
+
+#marker6 {
+    top: 246px;
+    left: 544px;
+}
+
+/* Map Information Styles */
+/* This makes it so the when you are not hovering over one of the points nothing is below the map but when you hover over one of the points that points info appears. */
+div.mapInfo {
+    display: none;
+}
+
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
